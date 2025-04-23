@@ -1,0 +1,15 @@
+name: Simple CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Run simple command
+      run: echo "CI/CD 테스트 성공!"
